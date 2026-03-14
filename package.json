@@ -1,0 +1,12 @@
+{
+  "main": "index.js",
+  "dependencies": {
+    "@apollo/sandbox": "^2.7.4",
+    "apollo-server": "^3.13.0",
+    "graphql": "^16.13.1",
+    "nodemon": "^3.1.14"
+  },
+  "scripts": {
+    "start": "nodemon -e js,json,graphql"
+  }
+}

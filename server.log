@@ -1,0 +1,35 @@
+Starting inspector on 127.0.0.1:0 failed: operation not permitted
+Error in the js-debug bootloader, please report to https://aka.ms/js-dbg-issue: Error [ERR_INSPECTOR_NOT_ACTIVE]: Inspector is not active
+    at Object.inspectorWaitForDebugger (node:inspector:192:11)
+    at Ha (bootloader.bundle.cdp:8:8018)
+    at bootloader.bundle.cdp:8:6605
+    at bootloader.bundle.cdp:8:6821
+    at Object.<anonymous> (bootloader.bundle.cdp:8:9001)
+    at Module._compile (node:internal/modules/cjs/loader:1554:14)
+    at Object..js (node:internal/modules/cjs/loader:1706:10)
+    at Module.load (node:internal/modules/cjs/loader:1289:32)
+    at Function._load (node:internal/modules/cjs/loader:1108:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+node:events:496
+      throw er; // Unhandled 'error' event
+      ^
+
+Error: listen EPERM: operation not permitted 0.0.0.0:4000
+    at Server.setupListenHandle [as _listen2] (node:net:1915:21)
+    at listenInCluster (node:net:1994:12)
+    at Server.listen (node:net:2099:7)
+    at /Users/ishidzukanaoki/development/photo-share-api/node_modules/apollo-server/dist/index.js:89:29
+    at new Promise (<anonymous>)
+    at ApolloServer.listen (/Users/ishidzukanaoki/development/photo-share-api/node_modules/apollo-server/dist/index.js:87:15)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+Emitted 'error' event on Server instance at:
+    at emitErrorNT (node:net:1973:8)
+    at process.processTicksAndRejections (node:internal/process/task_queues:90:21) {
+  code: 'EPERM',
+  errno: -1,
+  syscall: 'listen',
+  address: '0.0.0.0',
+  port: 4000
+}
+
+Node.js v22.14.0
