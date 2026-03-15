@@ -9,6 +9,8 @@ const typeDefs = `
     type Query {
         totalPhotos: Int!
         allPhotos: [Photo!]!
+        totalUsers: Int!
+        allUsers: [User!]!
     }
 
     type Mutation {
@@ -25,6 +27,13 @@ const typeDefs = `
         GRAPHIC
     }
 
+    type User {
+        githubLogin: ID!
+        name: String
+        avatar: String
+        postedPhotos: [Photo!]!
+    }
+
     type Photo {
         id: ID!
         url: String!
@@ -32,6 +41,7 @@ const typeDefs = `
         description: String
         created: DateTime!
         category: PhotoCategory!
+        postedBy: User!
     }
 `
 var _id = 0
