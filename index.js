@@ -11,6 +11,10 @@ const typeDefs = `
         allPhotos: [Photo!]!
         totalUsers: Int!
         allUsers: [User!]!
+        User(githubLogin: ID!): User!
+        Photo(id: ID!): Photo!
+        allUsers(first: Int=50 start: Int=0): [User!]!
+        allPhotos(first: Int=25 start: Int=0): [Photo!]!
     }
 
     type Mutation {
