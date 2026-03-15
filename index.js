@@ -15,11 +15,23 @@ const typeDefs = `
         postPhoto(name: String!, description: String): Photo!
     }
 
+    scalar DateTime
+
+    enum PhotoCategory {
+        SELFIE
+        PORTRAIT
+        ACTION
+        LANDSCAPE
+        GRAPHIC
+    }
+
     type Photo {
         id: ID!
         url: String!
         name: String!
         description: String
+        created: DateTime!
+        category: PhotoCategory!
     }
 `
 var _id = 0
